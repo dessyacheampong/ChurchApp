@@ -59,7 +59,7 @@ const SetupScreen = ({ onConnect }: { onConnect: (key: string, binId: string) =>
       if (mode === 'new') {
         resolvedBinId = await jsonbinCreate(apiKey.trim());
       } else {
-        // Verify the bin is accessible
+        // Verify the bin is accessible.
         await jsonbinLoad(apiKey.trim(), resolvedBinId);
       }
       localStorage.setItem('cms_api_key', apiKey.trim());
